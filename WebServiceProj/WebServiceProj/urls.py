@@ -21,6 +21,7 @@ from appweb import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path('appweb/',include('appweb.urls')),
+    path('appweb/',include('appweb.urls')),  # Includes appweb URLs
     path('hello/', views.hello_world, name='hello'),  # Add a direct URL mapping for "hello"
+    path("", views.home, name="home"), # Add root URL pattern
 ]
