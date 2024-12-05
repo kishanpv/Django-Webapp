@@ -17,8 +17,10 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path,include
+from appweb import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('appweb/',include('appweb.urls')),
+    path('hello/', views.hello_world, name='hello'),  # Add a direct URL mapping for "hello"
 ]
